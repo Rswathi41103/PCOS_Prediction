@@ -1,0 +1,1114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --h1-font : 'Gabriela';
+    --p-font : 'Gadugi';
+    --first: #D8E2DC;
+    --second: #FFE5D9;
+    --third: #FFCAD4;
+    --fourth: #F4ACB7;
+    --fifth: #9D8189;
+    --six:#C65B79;
+    --white:#FFFFFF;
+    --black: #000000;
+    --gradient: linear-gradient(163deg, #FFF -35.43%, #D8E2DC 133.45%);
+    --box-shadow: 17px 11px 13.3px 0px rgba(0, 0, 0, 0.25);
+}
+.container{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* Navbar */
+.nav{
+    width: 100%;
+    height: 80px;
+    background: var(--first);
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    /* box-shadow: var(--box-shadow); */
+}
+.card_list{
+    padding: 20px;
+    margin-right: 50px;
+}
+.card_list a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 18px;
+    font-family: var(--p-font);
+    margin-right: 60px;
+}
+.card_list a:hover{
+    color: var(--six);
+}
+.card_list a.active{
+    color: var(--six);
+}
+.card_list a.active::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--six);
+    transition: width 0.3s;
+}
+
+/* Banner */
+.banner{
+    display: flex;
+}
+.card_banner_1{
+    width: 800px;
+    height: 351px; 
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+.card_banner_1 h1{
+    font-family: var(--h1-font);
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--six);
+}
+.card_banner_1 p{
+    font-family: var(--p-font);
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 20px;
+    line-height: normal;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+.card_banner_1_btn{ 
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 50px;
+   
+}
+.card_banner_1_btn1{
+    width: 225px;
+    height: 57px;
+    border-radius: 0px 45px;
+    background: var(--fifth);
+    border: none; 
+    box-shadow: var(--box-shadow);
+}
+.card_banner_1_btn1_a{
+    color: #FFF;
+    text-align: justify;
+    font-family: Gadugi;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.card_banner_1_btn2{
+    width: 225px;
+    height: 57px;
+    border-radius: 45px 0px;
+    background: var(--fifth);
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+.card_banner_2_1{
+    margin-left: 50px;
+    margin-top: 80px;
+    
+}
+.card_banner_2{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card_banner_2_img_1{
+    width: 187px;
+    height: 250px;
+    margin-right: 20px;
+}
+.card_banner_2_img_2{
+    width: 187px;
+    height: 250PX;
+    margin-left: 20px;
+}
+.card_banner_2_img_3{
+    width: 420px;
+    height: 180px;
+    margin: 20px;
+}
+
+/* Explore */
+.explore{
+    background-color: var(--second);
+    width: 230px;
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.explore svg{
+    margin-left: 20px;
+    padding-top: 10px;
+}
+.explore_h1{
+    font-family: var(--h1-font);
+    font-size: 26px;
+    color: var(--six);
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.Explore_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.explore_card{
+    width: 330px;
+    height: 400px;
+    background: var(--gradient);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.explore_card_pink{
+    background: var(--fourth);
+    height: 220px;
+    border-radius: 20px 20px 0px 0px;
+}
+.explore_card_img{
+    margin: 25px 25px 10px 25px;
+}
+.explore_card_h1{
+    font-family: var(--h1-font);
+    font-size: 22px;
+    color: var(--black);
+    text-align: center;
+}
+.explore_card_btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background: var(--six, #C65B79);
+    width: 180px;
+    padding: 1px;
+    border: none;
+    margin-left: 75px;
+}
+.explore_card_btn svg{
+    padding: 5px;
+}
+.explore_card_btn_a{
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: Gadugi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 4px;
+    padding-left: 8px;
+    text-decoration: none;
+}
+
+/* Thriving-Flourishing */
+.Thriving-Flourishing{
+    background-color: var(--second);
+    width: 440px;
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.Thriving-Flourishing_img{
+    padding: 10px;
+    margin-left: 20px;
+}
+.Thriving-Flourishing_h1{
+    font-family: var(--h1-font);
+    font-size: 25px;
+    color: var(--six);
+    margin-left: 10px;
+    margin-top: 18px;
+}
+.thriving_flourishing_p{
+    margin-bottom: 10px;
+    color: #000;
+    text-align: justify;
+    font-family: Gabriela;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.thriving_flourishing_ul{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: justify;
+    font-family: Gabriela;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.thriving_flourishing_card_img{
+    display: flex;   
+}
+.thriving_flourishing_card_img_2_1{
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 320px;
+    width: 500px;
+}
+.thriving_flourishing_card_img_2{
+    display: flex;
+    
+    margin-right: 20px;
+}
+.thriving_flourishing_card_2_img_1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.thriving_flourishing_card_img_1_2{
+    margin-right: 20px;
+    height: 145px;
+    box-shadow: var(--box-shadow);
+}
+.thriving_flourishing_card_3_img_1{
+    display: flex;
+    margin-top: 10px;
+}
+.thriving_flourishing_card_1_img_2{
+    margin-left: 20px;
+    width: 830px;
+    height: 150px;
+    box-shadow: var(--box-shadow);
+}
+.thriving_flourishing_card_img_1_3{
+    width: 840px;
+    height: 155px;
+}
+/*Special card*/
+.special_card{
+    background-image: -webkit-linear-gradient(70deg, var(--third) 50%, var(--six) 30%);
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* Footer */
+.footer{
+    background: var(--black);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: var(--box-shadow);
+    padding-top: 20px;
+}
+.footer_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.footer_card_icon{
+    background-color: #FFFFFF;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.footer_card_icon svg{
+    padding-top: 5px;
+}
+.footer_card_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.footer_card_1 a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--p-font);
+    color: #FFFFFF;
+    margin-left: 25px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.footer_card_2 h1{
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: var(--p-font);
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* About Page */
+
+/* About Banner */
+.about_banner{
+    background-image: url("/static/images/Rectangle\ 22.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.about_banner h1{
+    font-family: var(--h1-font);
+    font-size: 50px;
+    color: var(--white);
+    color: #FFF;
+    text-align: justify;
+    font-family: var(--h1-font);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+        
+}
+.about_banner p{
+    color: #FFF;
+    font-family: var(--h1-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* About Content */
+.question_card{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.question_card_h1{
+    font-family: var(--h1-font);
+    font-size: 30px;
+    color: var(--six);   
+}
+.question_card_p{
+    font-family: var(--p-font);
+    color: #000;
+    text-align: justify;
+    font-family: Gadugi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+}
+.question_card_ul{
+    margin-top: 10px;
+    font-family: var(--p-font);
+    color: #000;
+    text-align: justify;
+    /* font-family: Gadugi; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 20px;
+}
+.question_card_h2{
+    font-family: var(--p-font);
+    font-size: 25px;
+    color: var(--fourth);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.question_card_li{
+    font-family: var(--p-font);
+    font-size: 16px;
+    color: var(--fourth);
+    font-family: Gadugi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.question_card_p1{
+    font-family: var(--p-font);
+    font-size: 16px;
+    color: #000;
+    text-align: justify;
+    font-family: Gadugi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom:10px;
+}
+.question_card_li_ul{
+    margin-left: 15px;
+}
+.question_card_li_1{
+    font-family: var(--p-font);
+    font-size: 16px;
+    color: var(--fifth);
+    font-family: Gadugi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+/* Irregular Periods  */
+
+/* Irregular Periods Banner */
+.irregular_banner{
+    background-image: url("/static/images/Rectangle\ 23.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.irregular_banner_card_h1{
+    color: var(--white, #FFF);
+    text-align: justify;
+    font-family: Gabriela;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.irregular_card{
+    display: flex;
+    justify-content: center;
+}
+.irregular_card_1{
+    width: 500px;
+    height: 400px;
+}
+.irregular_card_color{
+    width: 133px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #F4ACB7;
+    filter: blur(50px);
+    justify-content: start; 
+    margin-top: 5px; 
+}
+.irregular_card_color_1{
+    width: 133px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #F4ACB7;
+    filter: blur(50px);
+    margin-left: 300px;
+    margin-top: -30px;
+
+}
+.irregular_card_color_img{
+    width: 360px;
+    height: 209px;
+    flex-shrink: 0;
+    background-image: url("/static/images/Rectangle\ 24.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+    margin-top: -50px;
+}
+.irregular_card_p{
+    color: #000;
+    text-align: justify;
+    font-family: Gadugi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.irregular_card_2_p{
+    margin-top: 20px;
+
+}
+.irregular_card_2{
+    width: 500px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.irregular_card_p_1{
+    margin-top: 10px;
+    color: #000;
+    text-align: justify;
+    font-family: var(--p-font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.irregular_card_p_2{
+    margin-top: 10px;
+    color: #000;
+    text-align: justify;
+    font-family: var(--p-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.question_card_flex{
+    display: flex;
+    flex-direction: column;
+}
+.question_card_flex_card{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    background: var(--five, #9D8189);
+    box-shadow: 17px 11px 13px 0px rgba(0, 0, 0, 0.25);
+}
+.question_card_flex_card_img{
+    width: 90%;
+    height: 318px;
+    border-radius: 8px;
+    margin-top: -100px;
+    margin-left: 50px;
+    box-shadow: 17px 11px 13px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Hair skin */
+
+/* Hair skin Banner */
+.hair_banner{
+    background-image: url("/static/images/paul-siewert-dnpa8k6TGRE-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.hair_card_1{
+    width: 500px;
+    margin-top: 50px;
+}
+.hair_card_color_img{
+    width: 360px;
+    height: 209px;
+    flex-shrink: 0;
+    background-image: url("/static/images/hair.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+    box-shadow: var(--box-shadow);
+}
+.hair_card_2{
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.hair_card_p_1{
+    margin-top: 10px;
+    color: #000;
+    text-align: justify;
+    font-family: var(--p-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+/* Excess Androgens */
+
+/* Excess Androgens Banner */
+.excess_banner{
+    background-image: url("/static/images/sangharsh-lohakare-Iy7QyzOs1bo-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.excess_question_card_h1{
+    font-family: var(--p-font);
+    font-size: 18px;
+    margin-top: 15px;
+    color: var(--fourth);
+    margin-left: 15px;
+}
+.excess_question_card_ol{
+    margin-left: 60px;
+    margin-top: 15px;
+}
+.excess_question_card_p{
+    font-family: var(--p-font);
+    font-size: 15px;
+    font-weight: 300;
+    padding: 6px;
+}
+.excess_card_color_img{
+    width: 360px;
+    height: 200px;
+    flex-shrink: 0;
+    background-image: url("/static/images/excess_card_color_img.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+    box-shadow: var(--box-shadow);
+}
+.excess_card_1{
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.excess_card_2{
+    width: 500px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.excess_question_card_ol_li{
+    font-family: var(--p-font);
+    font-size: 16px;
+    color: var(--fourth);
+    font-weight: 400;
+}
+.excess_question_card_ol_li_ul{
+    margin-left: 50px;
+}
+.excess_question_card_ol_li_ul_li{
+    color: #000;
+}
+
+/*Predict PCOS*/
+.predict_banner{
+    background-image: url("/static/images/predict_1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.predict_container{
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: row;
+    border-color: #F4ACB7;
+    border-style: dashed;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.predict_container_card_img{
+    background-image: url("/static/images/WhatsApp Image 2024-06-24 at 12.18.52 PM (1).jpeg");
+    width: 600px;
+}
+
+.predict_container_card_form_1{
+    display: flex;
+    flex-direction: column;
+    padding-left: 120px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.predict_container_card_form_1 label{
+    font-family: var(--p-font);
+    font-size: 16px;
+}
+.predict_container_card_form_1 input{
+    padding: 8px;
+    margin: 5px ;
+    width: 150%;
+    border-radius: 10px;
+    border-color: var(--six);
+}
+.predict_container_2{
+    display: flex;
+    flex-direction: row;
+    /*justify-content:space-evenly;*/
+    border-color: #F4ACB7;
+    border-style: dashed;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: var(--box-shadow);
+}
+.predict_container_card_form_2{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 150px;
+    padding-right: 100px;
+}
+.predict_container_card_form_2 label{
+    font-family: var(--p-font);
+    font-size: 16px;
+}
+.predict_container_card_form_2 input{
+    padding: 8px;
+    margin: 5px ;
+    width: 150%;
+    border-radius: 10px;
+    border-color: var(--six);
+}
+.predict_container_card_img_2{
+    background-image: url("/static/images/WhatsApp Image 2024-06-24 at 12.18.50 PM.jpeg");
+    width: 600px;
+    margin-left: 155px;
+}
+.predict_container_card_img_3{
+     background-image: url("/static/images/WhatsApp Image 2024-06-24 at 12.18.52 PM.jpeg");
+    width: 600px;
+    margin-left: 155px;
+}
+.predict_container_3{
+    display: flex;
+    flex-direction: row;
+    border-color: #F4ACB7;
+    border-style: dashed;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    padding-bottom: 50px;
+    background-image: -webkit-linear-gradient(70deg, var(--six) 50%, var(--first) 50%);
+}
+.predict_container_3_h4{
+    color: var(--white);
+    font-family: var(--p-font);
+    font-size: 20px;
+    width: 500px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.predict_container_3_input{
+    background-color: #F4ACB7;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 110px;
+}
+.predict_container_3_h1{
+    color: var(--six);
+    font-family: var(--p-font);
+    font-size: 20px;
+    width: 500px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+.predict_container_3_btn{
+    padding: 8px;
+    width: 100px;
+    background-color: var(--six);
+    color: #D8E2DC;
+    position: absolute;
+    right: 32%;
+    border: #9D8189;
+    font-family: var(--p-font);
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Predict PCOS Ans*/
+.result{
+    background-image: -webkit-linear-gradient(70deg, var(--first) 50%, var(--second) 30%);
+    padding: 50px;
+    text-align: center;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+.result_h1{
+    font-family: var(--h1-font);
+    font-size: 40px;
+    color: var(--six);
+}
+.predict_banner_ans{
+    background-image: url("/static/images/steve-johnson-y-l0g1pJtYE-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Ploycystic Ovarises */
+.ovarises_card{
+    display: flex;
+}
+.ovarises_card_2_p{
+    margin-left: 50px;
+}
+.ovarises_card_p_1{
+    padding-bottom: 10px;
+}
+.question_card_p_1{
+    font-family: var(--p-font);
+    color: #000;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+.ovarises_banner{
+    background-image: url("/static/images/polycystic_ovary_syndrome_promo_pe_1796x943.webp");
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.ovarises_banner_card_h1{
+    color: var(--white, #FFF);
+    text-align: justify;
+    font-family: Gabriela;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.changes_card_color_img{
+    width: 360px;
+    height: 200px;
+    flex-shrink: 0;
+    background-image: url("/static/images/pexels-mart-production-7279062.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+    box-shadow: var(--box-shadow);
+}
+.changes_card_p_1{
+    margin-top: 5px;
+    color: #000;
+    text-align: justify;
+    font-family: var(--p-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 35px;
+
+}
+.changes_banner{
+    background-image: url("/static/images/pexels-jeremy-bishop-1260133-3464601.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.weigth_banner{
+    background-image: url("/static/images/pexels-andres-ayrton-6551070.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    padding-top: 60px;
+}
+.weigth_card_color_img{
+    width: 360px;
+    height: 200px;
+    flex-shrink: 0;
+    background-image: url("/static/images/fuu-j-Fu7RNjl-pW0-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+    box-shadow: var(--box-shadow);
+
+}
+.result{
+background-color: var(--six);
+color:black
+}
+.result p{
+font-size:18px;
+}
+.card_logo{
+
+}
+.logo{
+height:50px;
+width:50px;
+margin: 10px 0px 0px 50px;
+border-radius: 50px;
+}
+
+/*Media Query */
+@media only screen and (min-width: 800px ) and (max-width: 1300px) {
+    .banner{
+        display:flex;
+        flex-direction: column;
+    }
+    .card_banner_1{
+        width: 100%;
+    }
+    .card_banner_2_1{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 10px;
+        margin-top:10px;
+        margin-bottom: 20px;
+    }
+    .card_banner_2_img_3{
+        height: 200px;
+    }
+    .thriving_flourishing_card_img_2_1{
+        width: 50%;
+    }
+    .thriving_flourishing_card_1_img_2{
+        width: 100%;
+    }
+    .thriving_flourishing_card_img_1_3{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 800px ) and (max-width: 1200px){
+    .card_banner_2_1{
+        margin-top: 50px;
+    }
+    .card_banner_2_img_1{
+        width: 45%;
+    }
+    .card_banner_2_img_3{
+        width: 40%;
+    }
+    .Explore_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+    .explore_card{
+        margin-bottom: 10%;
+    }
+    .thriving_flourishing_card_img_2_1{
+        width: 110%;
+    }
+    .thriving_flourishing_card_1_img_1{
+        display: none;
+    }
+    .irregular_card {
+        flex-wrap: wrap;
+    }
+    .hair_card_color_img{
+        width: 100%;
+        margin-left: 0;
+    }
+    .excess_card_color_img{
+        width: 100%;
+        margin-left: 0;
+        background-position: top;
+    }
+    .predict_container_card_img{
+        width: 55%;
+        background-position: center;
+    }
+    .predict_container_card_form_1{
+        padding-left: 0;
+        padding-left: 30px;
+    }
+    .predict_container_card_form_1 input{
+        width: 100%;
+    }
+    .predict_container_card_img_2{
+        margin-left:0;
+        background-position: center;
+        width: 55%;
+
+    }
+    .predict_container_card_form_2{
+        padding-left: 20px;
+        margin-right: 10px;
+    }
+    .predict_container_card_img_3{
+        margin: 0;
+    }
+    .predict_container_3{
+        flex-wrap: wrap;
+    }
+    .predict_container_3_h4{
+        color: black;
+    }
+    .predict_container_3_h1{
+        color: var(--black);
+    }
+    .predict_container_3_btn{
+        left: 40%;
+        background-color: var(--fourth);
+    }
+}
+
+@media only screen and (min-width: 300px ) and (max-width: 600px){
+    .card_banner_1 p{
+        font-size: 25px;
+    }
+    .thriving_flourishing_p{
+        font-size: 16px;
+    }
+    .irregular_card {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .excess_card_color_img{
+        width: 300px;
+    }
+    .excess_question_card_ol{
+        margin-left: 20px;
+    }
+    .irregular_card_color_img{
+        width: auto;
+    }
+    .irregular_card_2{
+        margin-top: 0px;
+    }
+    .question_card_flex_card{
+        display: none;
+    }
+    .question_card_flex_card_img{
+        display: none;
+    }
+    .hair_card_color_img{
+        width: 250px;
+    }
+
+}
+
+
+

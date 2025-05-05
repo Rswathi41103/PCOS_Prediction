@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Form</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<!-- Navbar -->
+<div class="nav">
+    <div class="card_logo">
+        <img src="/static/img/logo.png" alt="logo">
+    </div>
+    <div class="card_list">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/">Normal</a>
+        <a href="/">Advance</a>
+    </div>
+</div>
+
+<!-- Predict PCOS Banner -->
+<div class="predict_banner">
+    <div class="container">
+        <h1 class="irregular_banner_card_h1">Predict PCOS</h1>
+    </div>
+</div>
+
+<div class="container">
+    <form id="pcos-form" action="{{ url_for('predict_pcos') }}" method="post" enctype="multipart/form-data">
+        <div class="predict_container">
+            <div class="predict_container_card_img">
+            </div>
+            <div class="predict_container_card_form_1">
+                <label >Whats your Age ?</label>
+                <input type="text" name="Age" placeholder="Age" required="required" />
+                <label >Whats your Weight ?</label>
+                 <input type="text" name="Weight" placeholder="Weight" required="required" />
+                <label >Whats your Height ?</label>
+                <input type="text" name="Height" placeholder="Height" required="required" />
+                <label >Whats your BMI ?</label>
+                <input type="text" name="BMI" placeholder="BMI" required="required"/>
+                <label >Whats your PulseRate ?</label>
+                 <input type="text" name="PulseRate" placeholder="PulseRate" required="required" />
+                <label >Whats your Irregular Periods ?</label>
+                 <input type="text" name="Cycle(R/I)" placeholder="Irregular Periods" required="required" />
+                <label >Whats your Respiration Rate ?</label>
+               <input type="text" name="RR" placeholder="Respiration Rate" required="required" />
+                <label >Whats your Ever been pregnant ?</label>
+               <input type="text" name="Pregnant" placeholder="Ever been pregnant" required="required" />
+
+            </div>
+
+        </div>
+
+        <div class="predict_container_2">
+
+            <div class="predict_container_card_form_2">
+                <label >Whats your No. of Abortions</label>
+                <input type="text" name="No. of Abortions" placeholder="No. of Abortions" required="required" />
+                <label >Whats your FSH Level ?</label>
+                 <input type="text" name="FSH" placeholder="FSH Level" required="required" />
+                <label >Whats your LH Level ?</label>
+               <input type="text" name="LH" placeholder="LH Level" required="required" />
+                <label >Whats your FHS:LH ratio ?</label>
+                <input type="text" name="FSH_LH_ratio" placeholder="FHS:LH ratio" required="required" />
+                <label >Whats your Waist:Hip Ratio?</label>
+                 <input type="text" name="W_H_ratio" placeholder="Waist:Hip Ratio" required="required" />
+                <label >Whats your TSH level ?</label>
+                 <input type="text" name="TSH" placeholder="TSH level" required="required" />
+                <label >Whats your AMH level ?</label>
+               <input type="text" name="AMH" placeholder="AMH level" required="required" />
+                <label >Whats your PRL level ?</label>
+              <input type="text" name="PRL" placeholder="PRL level" required="required" />
+
+            </div>
+             <div class="predict_container_card_img_2">
+
+            </div>
+
+
+        </div>
+
+
+         <div class="predict_container">
+            <div class="predict_container_card_img">
+            </div>
+            <div class="predict_container_card_form_1">
+                <label >Whats your Vitamin d3 level ?</label>
+                <input type="text" name="VitD3" placeholder="Vitamin d3 level" required="required" />
+                <label >Whats your PRG level ?</label>
+                <input type="text" name="PRG" placeholder="PRG level" required="required" />
+                <label >Whats your RBS level ?</label>
+                <input type="text" name="RBS" placeholder="RBS level" required="required" />
+                <label >Whats your weight increased ?</label>
+                <input type="text" name="Weight_gain" placeholder="weight increased" required="required" />
+                <label >Whats your abnormal Hair Growth ?</label>
+                <input type="text" name="hair_growth" placeholder="abnormal Hair Growth" required="required" />
+                <label >Do you experience skin darkening ?</label>
+                 <input type="text" name="Skin_darkening" placeholder="skin darkening" required="required" />
+                <label >Do you experience hair loss? ?</label>
+                <input type="text" name="Hair_loss" placeholder="hair loss" required="required" />
+                <label >Do you have pimples ?</label>
+                <input type="text" name="Pimples" placeholder="pimples" required="required" />
+
+            </div>
+
+        </div>
+
+
+         <div class="predict_container_2">
+
+            <div class="predict_container_card_form_2">
+                <label >Do you consume fast food ?</label>
+                <input type="text" name="Fast_food" placeholder="fast food" required="required" />
+                <label >Do you exercise regularly ?</label>
+                <input type="text" name="Reg_exercise" placeholder=" exercise regularly" required="required" />
+                <label >Whats your BP Systolic ?</label>
+                <input type="text" name="BP_systolic" placeholder="BP Systolic" required="required" />
+                <label >Whats your BP Diastolic ?</label>
+                <input type="text" name="BP_diastolic" placeholder="BP Diastolic" required="required" />
+                <label >Whats your Follicle count ?</label>
+                <input type="text" name="Follicle_count" placeholder="Follicle count" required="required" />
+
+
+            </div>
+             <div class="predict_container_card_img_3">
+
+            </div>
+
+
+        </div>
+
+        <div class="predict_container_3">
+            <div>
+                <h4 class="predict_container_3_h4">Upload an Image for Classification</h4>
+                <input type="file" name="file" accept="image/*" required="required" class="predict_container_3_input" />
+            </div>
+            <div>
+                <h1 class="predict_container_3_h1">After filling out all fields, you can get your result by clicking Predict. </h1>
+                <button type="submit" class="predict_container_3_btn">Predict</button>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer_card">
+        <p class="footer_card_icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 46 43" fill="none">
+  <path d="M23 0C19.9796 0 16.9888 0.569921 14.1983 1.67722C11.4078 2.78452 8.87229 4.40752 6.73654 6.45354C2.42321 10.5857 0 16.1901 0 22.0338C0 31.7727 6.601 40.0354 15.732 42.9659C16.882 43.1421 17.25 42.4591 17.25 41.8642V38.1405C10.879 39.4625 9.522 35.1879 9.522 35.1879C8.464 32.632 6.969 31.949 6.969 31.949C4.876 30.5829 7.13 30.627 7.13 30.627C9.43 30.7812 10.649 32.8964 10.649 32.8964C12.65 36.2456 16.031 35.254 17.342 34.7252C17.549 33.293 18.147 32.3236 18.791 31.7727C13.685 31.2219 8.326 29.327 8.326 20.9321C8.326 18.4863 9.2 16.5253 10.695 14.9609C10.465 14.4101 9.66 12.1186 10.925 9.14402C10.925 9.14402 12.857 8.54911 17.25 11.3915C19.067 10.9067 21.045 10.6643 23 10.6643C24.955 10.6643 26.933 10.9067 28.75 11.3915C33.143 8.54911 35.075 9.14402 35.075 9.14402C36.34 12.1186 35.535 14.4101 35.305 14.9609C36.8 16.5253 37.674 18.4863 37.674 20.9321C37.674 29.349 32.292 31.1998 27.163 31.7507C27.991 32.4337 28.75 33.7778 28.75 35.8269V41.8642C28.75 42.4591 29.118 43.1642 30.291 42.9659C39.422 40.0133 46 31.7727 46 22.0338C46 19.1403 45.4051 16.2751 44.2492 13.6018C43.0934 10.9286 41.3992 8.49957 39.2635 6.45354C37.1277 4.40752 34.5922 2.78452 31.8017 1.67722C29.0112 0.569921 26.0204 0 23 0Z" fill="black"/>
+</svg></p>
+         <p class="footer_card_icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 46 43" fill="none">
+  <path d="M36.2269 0H43.2802L27.8703 18.2165L46 43H31.8052L20.6885 27.9669L7.96567 43H0.9085L17.3918 23.5149L0 0.0019823H14.5552L24.6042 13.7426L36.2269 0ZM33.7525 38.6352H37.6606L12.4315 4.13686H8.23783L33.7525 38.6352Z" fill="black"/>
+</svg></p>
+         <p class="footer_card_icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 46 43" fill="none">
+  <path d="M40.8889 0C42.2444 0 43.5445 0.503371 44.503 1.39938C45.4615 2.29539 46 3.51063 46 4.77778V38.2222C46 39.4894 45.4615 40.7046 44.503 41.6006C43.5445 42.4966 42.2444 43 40.8889 43H5.11111C3.75556 43 2.45553 42.4966 1.49701 41.6006C0.53849 40.7046 0 39.4894 0 38.2222V4.77778C0 3.51063 0.53849 2.29539 1.49701 1.39938C2.45553 0.503371 3.75556 0 5.11111 0H40.8889ZM39.6111 37.0278V24.3667C39.6111 22.3012 38.7334 20.3204 37.171 18.8599C35.6086 17.3994 33.4895 16.5789 31.28 16.5789C29.1078 16.5789 26.5778 17.8211 25.3511 19.6844V17.0328H18.2211V37.0278H25.3511V25.2506C25.3511 23.4111 26.9356 21.9061 28.9033 21.9061C29.8522 21.9061 30.7622 22.2585 31.4332 22.8857C32.1042 23.5129 32.4811 24.3636 32.4811 25.2506V37.0278H39.6111ZM9.91556 13.2822C11.0542 13.2822 12.1462 12.8594 12.9514 12.1067C13.7566 11.3541 14.2089 10.3333 14.2089 9.26889C14.2089 7.04722 12.2922 5.23167 9.91556 5.23167C8.77012 5.23167 7.67159 5.65702 6.86164 6.41414C6.05169 7.17127 5.59667 8.19815 5.59667 9.26889C5.59667 11.4906 7.53889 13.2822 9.91556 13.2822ZM13.4678 37.0278V17.0328H6.38889V37.0278H13.4678Z" fill="black"/>
+</svg></p>
+         <p class="footer_card_icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 46 43" fill="none">
+  <path d="M13.34 0H32.66C40.02 0 46 5.59 46 12.47V30.53C46 33.8373 44.5945 37.009 42.0928 39.3476C39.5911 41.6862 36.198 43 32.66 43H13.34C5.98 43 0 37.41 0 30.53V12.47C0 9.16275 1.40546 5.99096 3.9072 3.65238C6.40893 1.3138 9.80201 0 13.34 0ZM12.88 4.3C10.684 4.3 8.57796 5.11546 7.02516 6.56699C5.47235 8.01853 4.6 9.98722 4.6 12.04V30.96C4.6 35.2385 8.303 38.7 12.88 38.7H33.12C35.316 38.7 37.422 37.8845 38.9748 36.433C40.5276 34.9815 41.4 33.0128 41.4 30.96V12.04C41.4 7.7615 37.697 4.3 33.12 4.3H12.88ZM35.075 7.525C35.8375 7.525 36.5688 7.80815 37.1079 8.31215C37.6471 8.81615 37.95 9.49973 37.95 10.2125C37.95 10.9253 37.6471 11.6088 37.1079 12.1129C36.5688 12.6169 35.8375 12.9 35.075 12.9C34.3125 12.9 33.5812 12.6169 33.0421 12.1129C32.5029 11.6088 32.2 10.9253 32.2 10.2125C32.2 9.49973 32.5029 8.81615 33.0421 8.31215C33.5812 7.80815 34.3125 7.525 35.075 7.525ZM23 10.75C26.05 10.75 28.9751 11.8826 31.1317 13.8986C33.2884 15.9146 34.5 18.6489 34.5 21.5C34.5 24.3511 33.2884 27.0854 31.1317 29.1014C28.9751 31.1174 26.05 32.25 23 32.25C19.95 32.25 17.0249 31.1174 14.8683 29.1014C12.7116 27.0854 11.5 24.3511 11.5 21.5C11.5 18.6489 12.7116 15.9146 14.8683 13.8986C17.0249 11.8826 19.95 10.75 23 10.75ZM23 15.05C21.17 15.05 19.415 15.7296 18.121 16.9392C16.827 18.1488 16.1 19.7894 16.1 21.5C16.1 23.2106 16.827 24.8512 18.121 26.0608C19.415 27.2705 21.17 27.95 23 27.95C24.83 27.95 26.585 27.2705 27.879 26.0608C29.173 24.8512 29.9 23.2106 29.9 21.5C29.9 19.7894 29.173 18.1488 27.879 16.9392C26.585 15.7296 24.83 15.05 23 15.05Z" fill="black"/>
+</svg></p>
+         <p class="footer_card_icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 46 40" fill="none">
+  <path d="M18.4 28.5714L30.337 20L18.4 11.4286V28.5714ZM44.988 6.2C45.287 7.54286 45.494 9.34286 45.632 11.6286C45.793 13.9143 45.862 15.8857 45.862 17.6L46 20C46 26.2571 45.632 30.8571 44.988 33.8C44.413 36.3714 43.079 38.0286 41.009 38.7429C39.928 39.1143 37.95 39.3714 34.914 39.5429C31.924 39.7429 29.187 39.8286 26.657 39.8286L23 40C13.363 40 7.36 39.5429 4.991 38.7429C2.921 38.0286 1.587 36.3714 1.012 33.8C0.713 32.4571 0.506 30.6571 0.368 28.3714C0.207 26.0857 0.138 24.1143 0.138 22.4L0 20C0 13.7429 0.368 9.14286 1.012 6.2C1.587 3.62857 2.921 1.97143 4.991 1.25714C6.072 0.885714 8.05 0.628571 11.086 0.457142C14.076 0.257142 16.813 0.171428 19.343 0.171428L23 0C32.637 0 38.64 0.457143 41.009 1.25714C43.079 1.97143 44.413 3.62857 44.988 6.2Z" fill="black"/>
+</svg></p>
+    </div>
+    <div class="footer_card_1">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/">Normal</a>
+        <a href="/predict">Advance</a>
+    </div>
+    <div class="footer_card_2">
+        <h1>© 2024 Dhanush . All rights reserved</h1>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Your CSS styles */
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="/about">About</a>
+  <a href="/">advance</a>
+  <a href = "/static">static</a>
+
+</div>
+
+<div class="main">
+  <body style="background-color:black;">
+    <div class="login">
+      <h1 style="text-align:center; color:white;"><u>Predict PCOS</u></h1>
+      <br><br>
+      <p style="color:white;">Note: For questions where you need to answer Yes or No, input 1 as Yes and 0 as No. Use metric system to input the data</p>
+      <br>
+      <h4 style="color:white;">Predicting PCOS</h4>
+      <form id="pcos-form" action="{{ url_for('predict_pcos') }}" method="post" enctype="multipart/form-data">
+        <input type="text" name="Age" placeholder="Whats your Age?" required="required" />
+        <input type="text" name="Weight" placeholder="Weight" required="required" />
+        <input type="text" name="Height" placeholder="Height" required="required" />
+        <input type="text" name="BMI" placeholder="BMI" required="required"/>
+        <input type="text" name="PulseRate" placeholder="PulseRate" required="required" />
+        <input type="text" name="Cycle(R/I)" placeholder="Irregular Periods?" required="required" />
+        <input type="text" name="RR" placeholder="Respiration Rate" required="required" />
+        <input type="text" name="Pregnant" placeholder="Ever been pregnant?" required="required" />
+
+
+        <input type="text" name="No. of Abortions" placeholder="No. of Abortions" required="required" />
+        <input type="text" name="FSH" placeholder="FSH Level?" required="required" />
+        <input type="text" name="LH" placeholder="LH Level?" required="required" />
+        <input type="text" name="FSH_LH_ratio'" placeholder="FHS:LH ratio" required="required" />
+        <input type="text" name="W_H_ratio" placeholder="Waist:Hip Ratio" required="required" />
+        <input type="text" name="TSH" placeholder="TSH level?" required="required" />
+        <input type="text" name="AMH" placeholder="AMH level?" required="required" />
+        <input type="text" name="PRL" placeholder="PRL level?" required="required" />
+
+
+        <input type="text" name="VitD3" placeholder="Vitamin d3 level?" required="required" />
+        <input type="text" name="PRG" placeholder="PRG level?" required="required" />
+        <input type="text" name="RBS" placeholder="RBS level?" required="required" />
+        <input type="text" name="Weight_gain" placeholder="weight increased?" required="required" />
+        <input type="text" name="hair_growth" placeholder="abnormal Hair Growth?" required="required" />
+        <input type="text" name="Skin_darkening" placeholder="Do you experience skin darkening?" required="required" />
+        <input type="text" name="Hair_loss" placeholder="Do you experience hair loss?" required="required" />
+        <input type="text" name="Pimples" placeholder="Do you have pimples?" required="required" />
+
+
+
+        <input type="text" name="Fast_food" placeholder="Do you consume fast food?" required="required" />
+        <input type="text" name="Reg_exercise" placeholder="Do you exercise regularly?" required="required" />
+        <input type="text" name="BP _systolic" placeholder="BP Systolic?" required="required" />
+        <input type="text" name="BP_diastolic" placeholder="BP Diastolic?" required="required" />
+        <input type="text" name="Follicle_count" placeholder="Follicle count" required="required" />
+
+        <h4 style="color:white;">Upload an Image for Classification</h4>
+        <input type="file" name="file" accept="image/*" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+
+      {% if pcos_prediction %}
+      <div class="result">
+        <h3 style="color:white;">PCOS Prediction Result: {{ pcos_prediction }}</h3>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</div>
+
+</body>
+</html>
